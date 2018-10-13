@@ -1,0 +1,119 @@
+.message
+    padding-left: 9%
+    padding-right: 9%
+    margin-bottom: 12px
+    position: relative
+    display: flex
+    flex-direction: row
+
+    +element("author")
+        margin: 0
+        font-weight: bolder
+
+        +modifier("color-1")
+          color: #35cd96
+        +modifier("color-2")
+          color: #6bcbef
+        +modifier("color-3")
+          color: #e542a3
+        +modifier("color-4")
+          color: #91ab01
+        +modifier("color-5")
+          color: #ffa97a
+        +modifier("color-6")
+          color: #1f7aec
+        +modifier("color-7")
+          color: #dfb610
+        +modifier("color-8")
+          color: #029d00
+        +modifier("color-9")
+          color: #8b7add
+        +modifier("color-10")
+          color: #fe7c7f
+        +modifier("color-11")
+          color: #ba33dc
+        +modifier("color-12")
+          color: #59d368
+        +modifier("color-13")
+          color: #b04632
+        +modifier("color-14")
+          color: #fd85d4
+        +modifier("color-15")
+          color: #8393ca
+        +modifier("color-16")
+          color: #ff8f2c
+        +modifier("color-17")
+          color: #3bdec3
+        +modifier("color-18")
+          color: #b4876e
+        +modifier("color-19")
+          color: #c90379
+        +modifier("color-20")
+          color: #ef4b4f
+
+    +element("text")
+        position: relative
+        white-space: pre-wrap
+        word-wrap: break-word
+        color: #262626
+        margin: 0
+
+    +element("note")
+        position: absolute
+        bottom: 1px
+        margin: 10px 0 0 0
+        right: 7px
+        vertical-align: top
+        display: inline-block
+        color: rgba(0, 0, 0, .45)
+        font-size: 11px
+        height: 15px
+        line-height: 15px
+        white-space: nowrap
+
+    +element("baloon")
+        border-radius: 7.5px
+        box-shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
+        min-width: 110px
+        padding: 6px 7px 15px 9px
+        box-sizing: border-box
+        font-size: 14.2px
+        line-height: 19px
+        color: #262626
+        display: inline-block
+        position: relative
+        background-color: #fff
+
+        +modifier("is-mine")
+            background-color: #dcf8c6
+            margin-left: auto
+
+            +modifier("and-first")
+                border-top-right-radius: 0
+
+                &:after
+                    content: ""
+                    background-position: 50% 50%
+                    background-repeat: no-repeat
+                    background-size: contain
+                    height: 19px
+                    width: 12px
+                    right: -12px
+                    top: 0
+                    position: absolute
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADAUExURUxpcXmHa4maet/4yA0aDRMTE8fhsgAAAAAAAMDXrCsxJeX/z1xzXIiYetPsvGBsVUdPPuH8zOH8zNDrvMvmtrrOpwAAAAAAABUVFRoaGtnyxLTMozQ+MMfftFBeSR8nH5aoh6q/mW9+ZN/4yMjhtRwlHAAAAIOWd+r/06C1kkNLOwsLC9z4xur/0+n/0t76x9v4xeL9y+b/z+j/0d/7yeH8yuX/zeD8ytz5xt76yOP/zeH+y+b/zuD8yd35xuf/0MY9jkkAAAAsdFJOUwBvd/ATDZIBAsMp/At/11c9yPbizHoICQwT4bY1ykkgjahl6s8bBYT6nUAWOLbtFAAAAIhJREFUKM/tzbUWwlAURNFBE9zdg0NecLf//yvKUJyUdDnl7HXXletXqmXl9wPbQ9JCcC+VJsOj2mDwovzj3osjHGNFEVxNRAj7UR1hlx+I4FbuC8HkZBE8OwnRxamdFsEmUxCCGdoI51RLBK9xVwTvjyMEbzlDMJMp7lqseNc8YNc6CGyF/a0vcmwhZbCG+kEAAAAASUVORK5CYII=)
+
+        +modifier("is-first")
+            border-top-left-radius: 0
+
+            &:before
+                content: ""
+                background-position: 50% 50%
+                background-repeat: no-repeat
+                background-size: contain
+                height: 19px
+                width: 12px
+                left: -12px
+                top: 0
+                position: absolute
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC)

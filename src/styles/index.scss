@@ -1,0 +1,13 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+@import "base/bem";
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";
+@import "modules/message";
+@import "modules/divider";
