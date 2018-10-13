@@ -5,6 +5,13 @@ html, body {
   height: 100%;
 }
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 @import "base/bem";
 @import "layout/header";
 @import "layout/content";
