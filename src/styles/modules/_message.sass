@@ -9,6 +9,60 @@
     +modifier("interruption")
         margin-top: 12px
 
+    +element("link")
+        background-color: #f2f2f2
+        border-radius: 6px
+        cursor: pointer
+        overflow: hidden
+        margin: -3px -4px 6px -6px
+        display: flex
+        border: 1px solid #e6e6e6
+
+        +element("description")
+            margin: 0
+            font-size: 12px
+            flex: 0 999 auto
+            overflow: hidden
+            color: rgba(0, 0, 0, .6)
+            display: none
+            text-overflow: ellipsis
+
+        +element("title")
+            color: #000
+            font-size: 13.6px
+            margin: 0
+            flex: 0 1 auto
+            overflow: hidden
+            font-weight: 600
+            text-overflow: ellipsis
+
+        +element("text")
+            padding: 6px 10px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            -webkit-flex: 1 1 auto
+            flex: 1 1 auto
+            max-height: 90px
+            line-height: 19px
+            box-sizing: border-box
+            overflow: hidden
+
+        +element("reference")
+            flex: none
+            font-size: 12px
+            color: rgba(0, 0, 0, .8)
+
+        +element("image")
+            width: 90px
+            height: 90px
+
+            +element("src")
+                width: inherit
+                height: inherit
+                object-fit: cover
+
+
     +element("author")
         margin: 0
         font-weight: bolder
